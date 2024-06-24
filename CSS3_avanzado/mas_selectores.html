@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mas selectores</title>
+    <style>
+        /*Si el div es padre directo de la etiqueta "p"*/
+        div > p{
+            background: burlywood;
+        }
+
+        /*Selector de siguiente. Si el "p" está después de "div". Si se agrega otra etiqueta entre div y p pirde funcionalidad*/
+        div + p{
+            background: crimson;
+            color: white;
+        }
+
+        /*Selector hermano. Si "p" es hermano de "ul"*/
+        ul ~ p{
+            background: blue;
+            color: white;
+        }
+
+        /*Selector por atributo*/
+        a[target]{
+            background: darkgoldenrod;
+        }
+
+        /*Selector por atributo y valor*/
+        input[type="text"], input[type="password"]{
+            width: 100%;
+            margin: 5px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, ullam.</p>
+
+        <ul>
+            <li>Item 1</li>
+            <li><p>Lorem ipsum dolor sit amet.</p></li>
+            <li>Item 3</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+    </div>
+    <!-- <h3>Titulo</h3> -->
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, tempora?</p>
+
+    <a href="#">Pagina 1</a>
+    <a href="#">Pagina 2</a>
+    <a href="https://render2web.com" target="_blank">render2web</a>
+
+    <form action="">
+        <input type="text" placeholder="Nombre">
+        <input type="password" placeholder="password">
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+</html>

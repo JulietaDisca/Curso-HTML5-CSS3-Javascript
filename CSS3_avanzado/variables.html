@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables CSS</title>
+    <style>
+
+        /*Variables*/
+        /*Las variables en CSS son contenedores de información que se utilizan para almacenar y reutilizar valores específicos. Estas se definen por el usuario y se indican con el prefijo "--"*/
+        :root{
+            --bg-header-color: purple;
+        }
+
+        body{
+            background: rgb(226, 226, 226);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    
+        header{
+            background: var(--bg-header-color);
+            
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Variables CSS (Custom Properties)</h1>
+    </header>
+    <div class="container">
+        <div class="box box-1">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ullam.</p>
+        </div>
+        <div class="box box-2">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ullam.</p>
+        </div>
+        <div class="box box-3">
+            <h2>Lorem ipsum dolor sit.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ullam.</p>
+        </div>
+    </div>
+</body>
+</html>

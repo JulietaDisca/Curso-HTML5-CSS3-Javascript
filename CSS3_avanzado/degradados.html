@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degradados</title>
+    <style>
+        /*Degradados*/
+        
+        div{
+            display: inline-block;
+        }
+        
+        div p{
+            font-size: 50px;
+            text-align: center;
+        }
+        
+        .box1{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            background: linear-gradient(red, orange);
+            /*background-image: linear-gradient(blue, white); *//*tambien se aplica a la propiedad bg-img*/
+        }
+        
+        .box2{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            background: linear-gradient(red, orange, blue, yellow);
+            /*Puede tener mas de 2 colores*/
+        }
+        
+        /*Cambiando el ángulo con grados*/
+        .box3{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            background: linear-gradient(45deg, red, blue, yellow);
+            background: linear-gradient(90deg, red, blue, yellow);
+        }
+
+        /*Se puede cambiar el angulo con palabras clave*/
+        .box4{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            background: linear-gradient(to bottom left, red, blue, yellow);
+            background: linear-gradient(to right top, red, blue, yellow);
+        }
+
+        /*Porcentaje de color (Desde donde empieza)*/
+        .box5{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            background: linear-gradient(red 20%, yellow 40%, blue 60%);
+        }
+
+        /*Multiples degradados*/
+        .box6{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
+            linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
+            linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+        }
+
+        /*Degradado radial*/
+        .box7{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            background: radial-gradient(red, blue);
+            background: radial-gradient(red, yellow , blue, white);
+            background: radial-gradient(circle red, yellow , blue, white);
+        }
+
+        /*Degradado Conic-gradient*/
+        .box8{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            background: conic-gradient(red 6deg, orange 11deg 18deg, yellow 23deg 45deg, green 50deg 110deg, blue 115deg 200deg, purple 205deg);
+        }
+
+        /*Repeating-linear-gradient*/
+        .box9{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            background: repeating-linear-gradient(45deg, red, blue 10%, yellow 25%);
+        }
+
+        /*Repeating-radial-gradient*/
+        .box10{
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            background: repeating-radial-gradient(#e66465, #9198e5 20%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, repellat.<p>1</p></div>
+    <div class="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, repellat.<p>2</p></div>
+    <div class="box3">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, repellat.<p>3</p></div>
+    <div class="box4">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, repellat.<p>4</p></div>
+    <div class="box5">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, repellat.<p>5</p></div>
+    <div class="box6">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, repellat.<p>6</p></div>
+    <div class="box7">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, repellat.<p>7</p></div>
+    <div class="box8">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, repellat.<p>8</p></div>
+    <div class="box9">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, repellat.<p>9</p></div>
+    <div class="box10">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, repellat.<p>10</p></div>
+</body>
+</html>

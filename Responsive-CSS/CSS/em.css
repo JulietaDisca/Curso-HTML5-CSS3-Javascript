@@ -1,0 +1,17 @@
+.caja{
+    font-size: 12px;
+}
+
+.caja h2{
+    font-size: 4em; /*1em = 12px*/
+}
+
+.caja p{
+    font-size: 2em;
+    padding: 1em; /*Quedaria en padding con 24px, por estas razones suele ser un poco confuso*/
+}
+
+ul{
+    font-size: 2em; /*Convierte a los items de ul con 32px y a los subitems del sub ul con hasta 64px, sucede por problemas entre padres e hijos, recomendado utilizar rem*/
+}
+

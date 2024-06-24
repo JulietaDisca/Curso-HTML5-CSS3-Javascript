@@ -1,0 +1,16 @@
+.caja{
+    font-size: 12px;
+}
+
+.caja h2{
+    font-size: 4rem; /*1rem = 16px*/
+}
+
+.caja p{
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+ul{
+    font-size: 1.4rem;
+}
