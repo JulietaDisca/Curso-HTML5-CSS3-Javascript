@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc()</title>
+    <style>
+        /*La función calc() en CSS permite realizar calculos matemáticos directamenteen tus estilos. Puedes utilizarla para realizar operaciones aritméticas en valores numéricos, lo que resulta útil para establecer tamáños, márgenes, anchos, alturas y otros atributos con basee en fórmulas*/
+        :root{
+            --width-box: 200px;
+            --height-box: 300px;
+            --margin-box: 20px;
+        }
+        
+        body{
+            color: aliceblue;
+        }
+        
+        .container{
+            background: brown;
+            /*width: 300px;*/
+            width: calc(500px - 10%);
+            height: 200px;
+        }
+        
+        .box{
+            background: blueviolet;
+            width: calc(var(--width-box) + 150px);
+            height: var(--height-box);
+            margin-right: var(--margin-box);
+            margin-left: calc(var(--margin-box) / 2);
+        }
+
+        .caja{
+            position: absolute;
+            background: blueviolet;
+            width: 100px;
+            height: 100px;
+            left: calc(50% - 100px);
+            top: calc(50% - 50px);
+        }
+
+        .box1{
+            background: brown;
+            height: 300px;
+            width: 40%;
+            margin-right: 20px;/*Si agrego margin box2 quedará abajo*/
+            float: left;
+        }
+
+        .box2{
+            background: olive;
+            height: 300px;
+            width: calc(60% - 20px); /*Pero si le resto el margin al width no se mueve*/
+            float: right;
+        }
+
+        .box3{
+            background: brown;
+            height: 300px;
+            width: calc(calc(50% - 100px) * 2); 
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+    </div>
+    <br> -->
+    <!-- <div class="box"></div> -->
+    <!-- <div class="caja"></div> -->
+    <!--<div class="box1"></div>
+    <div class="box2"></div> -->
+    <!--<div class="box3"></div> -->
+</body>
+</html>
