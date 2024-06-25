@@ -9,18 +9,58 @@
         /*Variables*/
         /*Las variables en CSS son contenedores de información que se utilizan para almacenar y reutilizar valores específicos. Estas se definen por el usuario y se indican con el prefijo "--"*/
         :root{
-            --bg-header-color: purple;
+            --container-max: 1024px;
+            --header-bg-color: purple;
+            --header-text-color: white;
+            --header-text-align: center;
+            --box-bg-color: rgb(128, 0, 0);
+            --box-text-color: #fff;
+            --box-border-color: brown; 
+            /*Espaciados*/
+            --spacing-sm: 8px;  /*sm = small*/
+            --spacing-md: 16px;  /*md = medium*/
+            --spacing-lg: 32px;  /*lg = large*/
+            --spacing-xl: 64px;  /*xl = extra large*/
+            --spacing-sxl: 128px; /*inventada sxl = super extra large*/
         }
 
         body{
             background: rgb(226, 226, 226);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
+        .container{
+            max-width: var(--container-max);
+
+        }
+
+        .box{
+            background: var(--box-bg-color);
+            color: var(--box-text-color);
+            border: 2px solid var(--box-border-color);
+            margin: 10px 0;
+            padding: var(--spacing-lg) var(--spacing-md);
+        }
     
         header{
-            background: var(--bg-header-color);
-            
+            max-width: var(--container-max);
+            background: var(--header-bg-color);
+            color: var(--header-text-color);
+            text-align: var(--header-text-align);
         }
+
+        .box-1{
+            --box-1-bg: green;
+            background: var(--box-1-bg);
+        }
+
+        /*Variables CSS para media queries*/
+        /*@media(max-width: 540px){
+            :root{
+            --container-max: 300px;
+            --header-bg-color: black;
+            }
+        }*/
 
     </style>
 </head>
