@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compatibilidad entre Navegadores</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+
+        /*La necesidad de usar prefijos de proveedores ha disminuido en gran medida debido a la mejora en la compatibilidad entre navegadores y a la adopción de estándares. Sin embargo, aún puedes encontrar prefijos en algunas propiedades CSS para garantizar que funcionen correctamente en varios navegadores.*/
+
+        .box1{
+            width: 500px;
+            height: 500px;
+            background: brown;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            /*Prefijo para Webkit (Chrome, Safari)*/
+            -moz-border-radius: 20px;
+            /*Prefijo para Mozilla (Firefox)*/
+            -ms-border-radius: 20px;
+            /*Prefijo para Microsoft (Internet Explorer)*/
+
+            box-shadow: 5px 5px 10px #888; /*Estandar*/
+            -webkit-box-shadow: 5px 5px 10px #888;
+            -moz-box-shadow: 5px 5px 10px #888;
+            -ms-box-shadow: 5px 5px 10px #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>
