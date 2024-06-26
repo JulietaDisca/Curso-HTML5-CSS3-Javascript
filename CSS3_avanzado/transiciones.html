@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transiciones</title>
+    <style>
+        body{
+            background: gray;
+            margin: 20px;
+        }
+
+        /*Las trancisiones en CSS permiten animar cambios en propiedades de un elemento durante un periodo de tiempo, creando efectos suaves.
+        Puedes aplicar transiciones a diferentes estados, como el csmbio de color al pasar el mouse sobre un enlace o el cambio de tamaño de un elemento al cambiar su altura*/
+
+        .box1{
+            background: #fff;
+            width: 200px;
+            height: 200px;
+            /*transition-property: background;
+            transition-duration: 2s;
+            transition-delay: 0.5s;
+            transition-timing-function: ease-in-out;*/
+            /*transition: background, width, border-radius 2s/*duration*/ /*0.5s/*delay*/ /*ease-in-out;*/
+            transition: all/*Opcion recomendada*/ 2s/*duration*/ 0.5s/*delay*/ ease-in-out;
+        }
+
+        .box1:hover{
+            background: brown;
+            width: 400px;
+            border-radius: 12px;
+            box-shadow: 12px 10px rgb(53, 53, 53);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

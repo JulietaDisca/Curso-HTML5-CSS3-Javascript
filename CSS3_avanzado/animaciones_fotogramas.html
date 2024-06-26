@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones y Fotogramas</title>
+    <style>
+        
+        body{
+            background: gray;
+            margin: 20px;
+        }
+
+        .box1{
+            background: #fff;
+            top: 0;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            animation-name: animation1;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards; /*"forwards" sirve para que la animación no vuelva a su lugar principal*/
+            animation-delay: 1s; /*animation-delay le dice a la animación cuanto tiempo esperar antes de realizarla*/
+            animation-direction: alternate; /*alternate = opción por defecto animacion va y vuelve por igual y no vuelve bruscamente, alternate-reverse = efecto contrario, la animacion empezará desde el final y terminará con los pixeles asignados al principio*/
+            animation-timing-function: ease; /*ease/ease-in/ease-in-out/ease-out*//*Propiedad para seleccionar dif. movos de asceleración*/
+            /*PROPIEDADES ANTERIORES RESUMIDAS EN UNA SOLA*/
+            animation: animation1 2s/*duration*/ infinite/*iteration-count*/ forwards/*fill-mode*/ 2s/*delay*/ alternate/*direction*/ ease-in-out/*timing-function*/;
+        }
+
+        @keyframes animation1{
+            from{
+                top: 0;
+            }
+            to{
+                width: 550px;
+                background: blue;
+                top: 300px;
+            }
+        }
+
+        .box2{
+            background: #fff;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            animation: animation2 6s/*duration*/ infinite forwards/*fill-mode*/ 2s/*delay*/ ease-in-out/*timing-function*/;
+            top: 0;
+            left: 0;
+        }
+
+        @keyframes animation2{
+            25%{
+                top: 0;
+                left: 300px;
+                background: red;
+                border-radius: 50% 0 0 0 ;
+            }
+            50%{
+                top: 300px;
+                left: 300px;
+                background: blue;
+                border-radius: 50% 50% 0 0;
+            }
+            75%{
+                top: 300px;
+                left: 0;
+                background: darkviolet;
+                border-radius: 50% 50% 50% 0 ;
+            }
+            
+            100%{
+                top: 0;
+                left: 0;
+                background: green;
+                border-radius: 50% 50% 50% 50% ;;
+            }
+        }
+
+/*En CSS, puedes crear animaciones utilizando la propiedad @keyframes para definir los cambios de estilo en diferentes etapas, y luego aplicar esos keyframesa un elemento utilizando la propiedad animation*/
+        /*Propiedades de animación*/
+        /*animation-name: Nombre de la animación (en este caso, el nombre de los keyframes)
+        animation-duration: Duración de la animación.
+        animation-timing-function: Especifica cómo la animación acelera o descelera en diferentes puntos a lo largo de su duración
+        animatión-delay: Retraso antes de que la animación comience
+        animacion-iteration-count: Número de veces que la animación se repetirá('infinite'' para repetir infinitamente).
+        animation-direction: Dirección de la animación(normal, reverse, alternate, alternate-reverse). */
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtros CSS</title>
+    <style>
+        body{
+            background: gray;
+            margin: 20px;
+        }
+
+        .box1{
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+            background: url(IMG/fondo.jpg);
+            background-size: cover;
+            filter: blur(2px); /*Desenfoque*/
+        }
+        
+        .img1{
+            width: 500px;
+            filter: blur(3px);
+            filter: brightness(0.7);/*controla el brillo*/
+            filter: contrast(150%); /*Contraste, de 0 a 100% sera el contraste normal*/
+            filter: drop-shadow(16px 16px 20px blue);
+            filter: grayscale();/*Deja la img en una escala de grises*/
+            filter: hue-rotate(300deg);
+            filter: invert();/*Invierte la imagen*/
+            filter: sepia();
+        }
+
+        .img2{
+            width: 500px;
+            filter: grayscale() contrast(180%) invert();
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, tenetur.</p></div>
+    <br>
+    <img class="img1" src="IMG/fondo.jpg">
+    <br>
+    <img class="img2" src="IMG/fondo.jpg">
+</body>
+</html>

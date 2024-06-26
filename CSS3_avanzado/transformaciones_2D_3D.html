@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformaciones 2D y 3D</title>
+    <style>
+        body{
+            background: gray;
+            margin: 100px;
+            top: 150px;
+        }
+
+        /*Las transformaciones en CSS permiten modificar la apariencia de un elemento aplicando cambios en su posicion, rotación, escala y más.*/
+        .box1{
+            background: white;
+            width: 300px;
+            height: 300px;
+            transform: rotate(25deg);
+        }
+
+        .box1:hover{
+            /*transform: translate(50px, 100px);*/
+            transform: rotate(95deg);
+        }
+
+        .box2{
+            background: white;
+            width: 300px;
+            height: 300px;
+        }
+
+        .box2:hover{
+            transform: scale(1.5);/*La caja pasa de medir 300*300 a 450*450*/
+        }
+
+        .box3{
+            background: white;
+            width: 300px;
+            height: 300px;
+        }
+
+        .box3:hover{
+            transform: skew(16deg);/*Tuerce el cuadrado*/
+        }
+
+        .box4{
+            background: white;
+            width: 300px;
+            height: 300px;
+            transition: all 1s ease-in-out;
+        }
+
+        .box4:hover{
+            transform: translate3d(100px/*x*/, 80px/*y*/, 90px/*z*/);
+            transform: skew(20deg, 20deg);
+        }
+
+        .box5{
+            background: white;
+            width: 300px;
+            height: 300px;
+            transition: all 1s ease-in-out;
+        }
+
+        .box5:hover{
+            transform: translate(50px, 50px) rotate(45deg) scale(1.6) skew(30deg, 20deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="box2"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="box3"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="box4"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="box5"></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reutilizando animaciones</title>
+    <style>
+        body{
+            background: gray;
+            margin: 20px;
+        }
+
+        .box1{
+            background: blueviolet;
+            width: 200px;
+            height: 200px;
+            animation-name: rotar1;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-in-out;
+        }
+
+        p{
+            animation-name: rotar1;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+        }
+
+        @keyframes rotar1{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, ad.</p>
+</body>
+</html>
