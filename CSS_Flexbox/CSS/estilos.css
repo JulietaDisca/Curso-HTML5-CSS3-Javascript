@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+.container{
+    display: flex; /*Simepre va en el contenedor, no en los boxes*/
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    border: 2px solid red;
+    flex-direction: row; /*flex-direction: row, row-reverse, column, column-reverse*/
+    justify-content: center; /*justify-content: flex-start, flex-end, center, space-between, space-around, space-evenly, baseline*/
+    /*flex-wrap: wrap; /*flex-wrap: wrap, wrap-reverse, nowrap(por defecto); el salto de linea depende del width/height de .box*/
+    align-items: center; /*align-items: stretch(por defecto)*/
+    /*align-content: center; /*Aplica cuando se usa flex-wrap*/
+    /*flex-flow: row wrap-reverse; Propiedad abreviada*/
+}
+
+.box{
+    width: 140px;
+    height: 140px;
+    margin: 0.5rem;
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+}
+
+.resaltado{
+    align-self: flex-start;
+    /*height: auto;*/
+}

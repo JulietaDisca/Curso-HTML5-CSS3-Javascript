@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    color: black;
+}
+
+.container{
+    border: 1px solid black;
+    width: 90%;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*La propiedaad flex-basis en CSS se utiliza en combinación
+con Flexbox y  define el tamaño inicial de un elemento 
+flexible antes de que se apliquen las propiedades flex-grow
+y flex-shrink. Puedes establecer el tamaño inicial de un 
+elemento en pixeles, porcentajes u otros valores de longitud*/
+
+.box{
+    background: brown;
+    /*width: 100px;
+    height: 100px;*/
+    margin: 5px;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 48px;
+    /*flex-basis: 250px;*/
+}
+
+div:nth-child(1){
+    /*width: 250px;*/
+    flex-basis: 150px;
+    flex-shrink: 5;
+}
+
+div:nth-child(2){
+    flex-basis: 300px;
+    flex-shrink: 3;
+}
+
+div:nth-child(3){
+    flex-basis: 180px;
+    flex-grow: 3;
+}
+
+
+
+

@@ -1,0 +1,65 @@
+/*flex: se aplica a los elementos del contenedor y que a 
+su vez se estructura de tres propiedades diferentes, que 
+se pueden presentar por separado, "flex-grow", "flex-shrink" 
+y "flex-basis", y  se define de la siguiente forma:
+
+- flex: none | <flex-grow> <flex-shrink> <flex-basis>*/
+
+/*flex-grow: <numero>; -> Determina el factor de incremento de tamaño de uno o varios elementos en relación al resto teniendo en cuenta el espacio "vacio" o "libre" entre ellos. Como espacio "vacio/libre" nos referimos al espacio que no ocupan los elementos en relación a su fila. Cuando este valor se omite, se establece en 1*/
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    color: black;
+}
+
+.container{
+    border: 1px solid black;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+/*.navbar{
+    background: brown;
+    margin: 0;
+    padding: 0 10px;
+    width: 300px;
+    flex-grow: 1;
+}
+
+p{
+    background: chocolate;
+    margin: 0;
+    padding: 0 10px;
+    width: 600px;
+    flex-grow: 3;
+}*/
+
+div{
+    background: brown;
+    margin: 5px;
+    border: 1px solid white;
+}
+
+div:nth-child(1){
+    flex-grow: 2;
+    text-align: left;
+}
+
+div:nth-child(2){
+    flex-grow: 6;
+    text-align: center;
+}
+
+div:nth-child(3){
+    flex-grow: 1;
+    text-align: right;
+}
