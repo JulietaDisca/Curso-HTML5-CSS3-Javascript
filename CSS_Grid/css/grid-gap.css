@@ -1,0 +1,29 @@
+/*grid-gap es una propiedad abreviada para grid-row-gap y 
+grid-column-gap que especifica los canales entre filas y 
+las columnas entre cuadrículas*/
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 800px;
+    height: 800px;
+    margin: 200px auto;
+    background: rgb(223, 223, 223);
+    box-shadow: 0 6px 20px gray;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr / repeat(4, 1fr);
+    /*column-gap: 20px;
+    row-gap: 20px;*/
+    grid-gap: 20px;
+}
+
+    .box{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}

@@ -1,0 +1,68 @@
+/*  Grid Lines  y  Posicionando Grid Item's  */
+/*  Span  *//*Indica cuantas casillas se mueven*/
+/*Abreviaturas Grid Item's*/
+/*  Grid Area  */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 800px;
+    height: 800px;
+    margin: 200px auto;
+    background: rgb(223, 223, 223);
+    box-shadow: 0 6px 20px gray;
+    display: grid;
+    /*grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);*/
+    grid-template-columns: [col1-start] 1fr [col1-end col2-start] 1fr [cal2-end col3-start] 1fr [col3-end col4-start] 1fr [col4-end];
+    grid-template-rows: [row1-start] 1fr [row1-end row2-start] 1fr [row2-end row3-start] 1fr [row3-end];
+}
+
+.box{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+/*Con Grid Item's*/
+/*.primero{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}*/
+
+/*Con Span*/
+/*.primero{
+    grid-column-start: 2;
+    grid-column-end: span 3;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+}*/
+
+/*Abreviatura*/
+.primero{
+    grid-column: 2 / span 3;
+    grid-row: 2 / span 2 /*ó 2 (es lo mismo)*/;
+}
+
+/*.segundo{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}*/
+
+.tercero{
+    grid-area: 2 / 3 / span 2 / 3; /*Todos los valores anteriores juntos*/
+    /*grid-row-start / grid-column-start / grid-row-end / grid-column-end*/
+}
+
+.cuarto{
+    grid-column-start: col3-start;
+    grid-row-start: row2-start;
+}

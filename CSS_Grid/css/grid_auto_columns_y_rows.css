@@ -1,0 +1,28 @@
+/*grid-auto-columns es una propiedad que 
+especifica el tamaño de una pista de columna de 
+cuadrícula o patrón de pistas creado implicitamente*/
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 800px;
+    height: 800px;
+    margin: 200px auto;
+    background: rgb(223, 223, 223);
+    box-shadow: 0 6px 20px gray;
+    display: grid;
+    grid-template: repeat(3, 100px) / repeat(2, 100px);
+    grid-auto-flow: column;
+    grid-auto-columns: 100px;
+}
+
+.box{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}

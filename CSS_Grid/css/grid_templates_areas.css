@@ -1,0 +1,44 @@
+/*grid-template-areas es una propiedad que especifica 
+areas de la cuadricula con nombres*/
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 800px;
+    height: 800px;
+    margin: 200px auto;
+    background: rgb(223, 223, 223);
+    box-shadow: 0 6px 20px gray;
+    display: grid;
+    /*grid-template-areas: 
+        "a a a"
+        "b c c"
+        "b c c";*/
+    grid-template-areas: 
+        "header header header"
+        "sidebar contenido contenido"
+        "sidebar contenido contenido";
+}
+
+.box{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.primero{
+    grid-area: header;
+}
+
+.segundo{
+    grid-area: sidebar;
+}
+
+.tercero{
+    grid-area: contenido;
+}

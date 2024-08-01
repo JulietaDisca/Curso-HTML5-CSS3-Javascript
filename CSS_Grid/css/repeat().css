@@ -1,0 +1,30 @@
+/*La función repeat() representa unfragmento repetido de 
+la lista de la pista, permitiendo un grán número de columnas 
+o renglones que exhiben un patrón recurrente para ser escrito 
+de una forma más compacta*/
+
+/**/
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 800px;
+    height: 800px;
+    margin: 200px auto;
+    background: rgb(223, 223, 223);
+    box-shadow: 0 6px 20px gray;
+    display: grid;
+    grid-template-columns: repeat(4/*cantidad*/, minmax(300px, 400px)/*Tamaño*/);
+    grid-template: repeat(2, 1fr) / repeat(4, minmax(250px, 400px));
+}
+
+.box{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}

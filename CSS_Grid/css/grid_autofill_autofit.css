@@ -1,0 +1,36 @@
+/*Auto-fill si el contenedor tiene un tamaño definido 
+o máximo en el eje relevante, entonces el número de 
+repeticiones es el mayor entero positivo posible que no 
+hace que la cuadrícula desborde su contenedor de cadrícula*/
+/*Auto-fit (intentará llenar todo el espacio que tenga)Se comporta igual, excepto que después de colocar 
+los elementos de la cuadrícula se colapsan las pistas vacías 
+repetidas. Una pista vacía es aquella sin elementos de 
+cuadrícula colocados o que se extienden a través de ella.*/
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 80%;
+    height: 700px;
+    margin: 200px auto;
+    border: 2px solid black;
+    background: rgb(223, 223, 223);
+    box-shadow: 0 6px 20px gray;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.box{
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.fit{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
