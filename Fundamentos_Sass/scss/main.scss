@@ -1,0 +1,78 @@
+@import 'variables';
+@import 'functions';
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: $color-oscuro;
+    color: $color-claro;
+    font-family: $fuente-defecto;
+    line-height: 1.6;
+}
+
+header{
+    background: $color-oscuro;
+    color: configurar-color-texto($color-oscuro);
+    padding: 1rem;
+
+    h1{
+        text-align: center;
+        text-decoration: underline;
+    }
+}
+
+.article{
+    padding: 4rem;
+
+    h3{
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: 1.2rem;
+    }
+
+    &-a{
+        background: configurar-color-texto($color-claro);
+        color: configurar-color-texto($color-oscuro);
+    }
+
+    &-b{
+        background: $color-secundario;
+    }
+
+    /*a{
+        color: $color-claro;
+        &:hover{
+            color: black;
+        }
+    }*/
+}
+
+/*Herencia*/
+%btn-general{
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 1rem 2rem;
+    background: #cccccc;
+}
+
+.btn{
+    &-azul{
+        @extend %btn-general;
+    }
+
+    &-naranja{
+        @extend %btn-general;
+        color: orange;
+
+        &:hover{
+            @include transform(rotate(30deg));
+        }
+    }
+}

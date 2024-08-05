@@ -1,0 +1,16 @@
+//Configurar color
+@function configurar-color-texto($color-texto){
+    @if(lightness($color-texto) > 50){
+        @return #000;
+    } @else{
+        @return #fff;
+    }
+}
+
+
+/*  Mixings  */
+@mixin transform($propiedad){
+    transform: $propiedad;
+    --webkit-transform: $propiedad;
+    -ms-transform: $propiedad
+}
