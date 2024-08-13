@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comillas y Template String's</title>
+    <script>
+        let conComillasDobles = "Esta es una cadena con comillas dobles"
+        console.log(conComillasDobles);
+
+        let conComillasSimples = 'Esta es una cadena con ccomillas simples';
+        console.log(conComillasSimples);
+
+        /*Si necesitas usar comillas del mismo tipo dentro de una cadena que ya está envuelta en comillas simples o dobles, puedes escaparla con la barra invertida (\)*/
+        let cadenaConComillas = "Esta cadena contiene \"comillas dobles\"";
+        console.log(cadenaConComillas)
+
+        /*Puedes combinar comillas dobles y simples dentro de una cadena*/
+        let combinación = "Cadena con 'comillas simples' y \"comillas dobles\"";
+        console.log(combinación)
+
+
+
+        /*Las plantillas de cadena, también conocidas como "template 
+        strings", son una característica de JavaScript introducida en 
+        ECMAScript 6 (ES6). Permiten la creación de cadenas de texto 
+        de manera más concisa y legible, especialmente cuando se necesita 
+        la incorporación de variables o expresiones dentro de la cadena.
+        
+        La sintaxis de las plantillas de cadena utilizan comillas 
+        invertidas ``, también conocidas como acento grave. Dentro de estas 
+        comillas, puedes incluir variables o expresiones encerradas entre 
+        ${} para que sean evaluadas e insertadas en la cadena resultante*/
+
+        let nombre = "Juan";
+        let edad = 25;
+        //Plantilla de cadena o template string
+        let mensaje = `Hola, mi nombre es ${nombre} y mi edad ${edad}`;
+        console.log(mensaje)
+
+        /*En las plantillas de cadena (template strings), puedes utilizar comillas dobles o simples sin preocuparte por escaparlas*/
+        let variable = "valor";
+        let plantillaConDobles = `Plantilla con comillas dobles y variable: ${variable}`;
+        console.log(plantillaConDobles)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

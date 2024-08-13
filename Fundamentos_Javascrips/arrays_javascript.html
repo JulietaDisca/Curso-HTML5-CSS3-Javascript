@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <script>
+        /*Los arrays son estructuras de datos en Javascript que permiten almacenar múltiples valores en una única variable. Aquí tienes ejemplos de cómo trabajar con arrays, así como algunos métodos de arrays comunes: */
+        //Declaración de un array
+        let frutas = ["Manzana", "Banana",  "Cereza"];
+
+        //Tambien podemos usar el constructor del Array
+        let colores = new Array("Rojo", "Verde", "Azul");
+
+        /*Acceder a elementos del array*/
+        console.log(frutas[2])
+        console.log(colores[1])
+
+        /*Modificar los elementos de un array*/
+        frutas[1] = "Pera";
+        console.log(frutas);
+
+        /*Longitud de un array*/
+        console.log(frutas.length);
+
+        /*Metodos Array*/
+
+        /*Push() y pop() para añadir y eliminar elementos al final:*/
+        frutas.push("Naranja");
+        console.log(frutas);
+
+        let ultimoElemento = frutas.pop();
+        console.log(frutas);
+        console.log(ultimoElemento);
+
+        /*unshift() y shift() para añadir y eliminar elementos al principio*/
+        frutas.unshift("Kiwi");
+        console.log(frutas);
+
+        let primerElemento = frutas.shift();
+        console.log(frutas)
+        console.log(primerElemento)
+
+        /*indexOf() para encontrar la posición de un elemento*/
+        let posicionCereza = frutas.indexOf("Cereza");
+        console.log(posicionCereza)
+
+        /*slice() para copiar parte de un array: */
+        let copiaFrutas = frutas.slice(1, 3);
+        /*start es 1, por lo que la extracción comienza desde 
+        la posición 1 del array frutas, que es la "Pera"
+        End es 3, por lo que la extracción termina en la posicón 
+        2 del array frutas, que es la "Cereza". Ten en cuenta que 
+        el elemento en la posición end no se incluye */
+        console.log(copiaFrutas)
+
+        /*splice() para agregar, eliminar o reemplazar elementos en una posición específica: */
+        frutas.splice(1, 2);
+        console.log(frutas);
+
+        //Añadir elemento en la posición 1
+        frutas.splice(1, 0, "Uva", "Mango");
+        console.log(frutas);
+
+        frutas.forEach(function(fruta){
+            console.log(fruta)
+        });
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

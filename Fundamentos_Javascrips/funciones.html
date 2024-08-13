@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones Javascript</title>
+    <script>
+        //Funciones
+        //Es una porcion de código que realiza una tarea específica y puede ser reutilizada e diferentes partes del código
+        //Ayudan a organizar y modular el código, permitiendo dividir tareas complejas en partes mas pequeñas y manejables
+        
+        //Declaración de una función
+        function saludar(){
+            console.log("Hola mundo!");
+        }
+        //Llamado o invocado de función
+        saludar();
+
+
+        //Expresiones de funcion
+        //Asigna una funcion anonima a una variable
+        let sumar = function(a, b){
+            return a + b;
+        }
+        //Llamado a la función
+        let resultado = sumar(3, 5);
+        //Imprimir el resultado
+        console.log(resultado);
+
+
+        //Función de flecha
+        let multiplicar = (a, b) => a * b;
+        //Llamada a la funcion multiplicar
+        let resultadoMultiplica = multiplicar(4, 6);
+        //Imprimir resultado
+        console.log(resultadoMultiplica);
+
+        //Parámetros y argumentos
+        function saludar(nombre){
+            console.log(`Hola, ${nombre}`);
+        }
+        //Llamar a la funcion
+        saludar("Juan");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

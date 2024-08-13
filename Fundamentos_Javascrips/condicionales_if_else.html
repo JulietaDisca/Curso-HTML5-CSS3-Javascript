@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales IF y ELSE</title>
+    <script>
+        //Condicion basica
+        let edad = 18;
+        if(edad >= 18){
+            console.log("Eres mayor de edad");
+        }else{
+            console.log("Eres menor de edad");
+        }
+
+        //Multiples condiciones
+        let hora = 16;
+        if(hora < 12){
+            console.log("Buenos dias");
+        } else if(hora < 18){
+            console.log("Buenas tardes");
+        } else{
+            console.log("Buenas noches");
+        }
+
+        //Anidamiento de condicionales
+        let saldo = 500;
+        let compra = 300;
+
+        if(saldo >= compra){
+            console.log("Compra realizada con éxito");
+
+            //Otro condicional anidado
+            if(saldo - compra > 100){
+                console.log("Todavía tienes un saldo cómodo")
+            } else{
+                ("Cuidado estas cerca de tu límite")
+            }
+        }else{
+            console.log("Fondos insuficientes para relizar la compra");
+        }
+
+        //Condición ternaria
+        let esDiaLaboral = true;
+
+        let mensaje = (esDiaLaboral) ?
+        "Hoy es un dia laboral" : "Es fin de semana no saboral";
+        console.log(mensaje);
+
+        //Evaluación de true o false
+        let valor = "Hola";
+
+        if(valor){
+            console.log("El valor existe y es verdadero")
+        } else {
+            console.log("El valor es falso o no existe")
+        }
+
+        //Comprobación de un tipo de variable
+        let dato = 42;
+
+        if(typeof dato == "number"){
+            console.log("Es un número")
+        } else if (typeof dato === "string"){
+            console.log("Es una cadena de texto")
+        } else{
+            console.log("Es de un tipo de dato diferente")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

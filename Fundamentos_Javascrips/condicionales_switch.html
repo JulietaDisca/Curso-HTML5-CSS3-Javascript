@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales SWITCH en Javascript</title>
+    <script>
+        let dia = 3;
+        let nombreDia;
+
+        switch(dia){
+            case 1:
+                nombreDia = "Lunes";
+            break;
+            case 2:
+                nombreDia = "Martes";
+            break;
+            case 3:
+                nombreDia = "Miércoles";
+            break;
+            case 4:
+                nombreDia = "Jueves";
+            break;
+            case 5:
+                nombreDia = "Viernes";
+            break;
+            case 6:
+                nombreDia = "Sábado";
+            break;
+            case 7:
+                nombreDia = "Domingo";
+            break;
+            default:
+                nombreDia = "Día no válido"
+        }
+
+        console.log(`El día es ${nombreDia}`)
+
+
+        let edad = 25;
+        let grupoEdad;
+
+        switch(true){
+            case edad < 13:
+                grupoEdad = "Niño";
+                break;
+            case edad < 18:
+                grupoEdad = "Adolescente";
+                break;
+            case edad < 60:
+                grupoEdad = "Adulto";
+                break;
+            default: grupoEdad = "Adulto Mayor";
+        }
+
+        console.log(grupoEdad)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

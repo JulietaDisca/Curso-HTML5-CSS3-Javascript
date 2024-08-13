@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fecha y Hora</title>
+    <!--Condigo JS-->
+    <script>
+        /*Crear un objeto Date con la fecha y hora actuales*/
+        let fechaActual = new Date();
+        console.log(fechaActual);
+
+        /*Crear un objeto Date con una cantidad específica
+         de milisegundos desde la época (1 de enero de 1970) */
+        let fechaEpoca = new Date(1620000000000);
+        console.log(fechaEpoca)
+
+        let fechaString = new Date("2022-05-03T12:30:00");
+        console.log(fechaString);
+
+
+        /*Metodos del Objeto Date*/
+        let fecha = new Date();
+
+        let anio = fecha.getFullYear();
+        console.log(anio);
+
+        let mes = fecha.getMonth();
+        console.log(mes); //Obtener el mes (0-11, donde 0 es enero)
+
+        let dia = fecha.getDate();
+        console.log(dia);
+
+        let hora = fecha.getHours();
+        console.log(hora);
+
+        let minutos = fecha.getMinutes();
+        console.log(minutos);
+
+        let segundos = fecha.getSeconds();
+        console.log(segundos);
+
+
+        // //Formatear la Fecha
+
+        let fechaInicial = new Date();
+
+        let formatoFecha = fechaInicial.toDateString();
+        console.log(formatoFecha);
+
+        let formatoHora = fechaInicial.toTimeString();
+        console.log(formatoHora);
+
+        let formatoPersonalizado = fechaInicial.toLocaleString();
+        console.log(formatoPersonalizado);
+
+
+        // //Operaciones con fechas
+        let fecha1 = new Date();
+        let fecha2 = new Date("2023-12-11");
+        let fecha3 = new Date("2023-12-31");
+
+        let unDiaDespues = new Date(fecha1.getTime() + 24 * 60 * 60 * 1000);
+        console.log(unDiaDespues);
+
+        let unMesDespues = new Date();
+
+        unMesDespues.setMonth(unMesDespues.getMonth() + 1);
+        console.log(unMesDespues);
+
+        //Diferencias entre fechas
+        //Calcular la diferencia en milisegundos y días entre dos fechas
+
+        let diferenciaEnMilisegundos = fecha2 - fecha1;
+        console.log(diferenciaEnMilisegundos);
+
+        let diferenciaEnDias = diferenciaEnMilisegundos / (24 * 60 * 60 * 1000);
+        console.log(diferenciaEnDias);
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

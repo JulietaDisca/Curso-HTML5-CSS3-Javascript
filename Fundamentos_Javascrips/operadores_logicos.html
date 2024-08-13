@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores lógicos</title>
+    <!--Codigo Script-->
+    <script>
+        /*El operador && devuelve true si ambas expresiones son verdaderas*/
+        let edad = 25;
+        let esEstudiante = true;
+
+        /*if(edad > 18 && esEstudiante){
+            console.log("El usuario es mayor de edad y estudiante");
+        } else{
+            console.log("El usuario no cumple con ambas condiciones");
+        }*/
+
+        /*El operador || devuelve true siu al menos una de las expresiones es verdadera*/
+        /*if(edad > 18 || esEstudiante){
+            console.log("El usuario es mayor de edad y puede ingresar");
+        } else{
+            console.log("El usuario no cumple con ninguna condición");
+        }*/
+
+        /*El operador ! invierte el valor de verdad de na expresión*/
+        let esDiaLaboral = true;
+        if(!esDiaLaboral){
+            console.log("Hoy no es un dia laboral");
+        } else{
+            console.log("Hoy es un dia laboral")
+        }
+
+        let salario = 3000;
+        let experienciaLaboral = 2;
+
+        /*if(salario > 2500 && (experienciaLaboral >= 2 || experienciaLaboral <= 5)){
+            console.log("El candidato cumple con los requisitos de salario y experiencia")
+        } else {
+            console.log("El candidato no cumple con los requisitos de salario y/o experiencia")
+        }*/
+
+        let input1 = prompt("Ingresa el valor 1");
+        let input2 = prompt("Ingresa el valor 2");
+
+        var resultado = input1 < input2 || input1 == input2;
+    </script>
+</head>
+<body>
+    <h1>Cálculo</h1>
+    <script>
+        document.write(input1 + " <= " + input2 + " es " + resultado);
+    </script>
+</body>
+</html>

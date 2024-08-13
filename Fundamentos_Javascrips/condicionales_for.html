@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo For Javascript</title>
+    <script>
+        //Bucle FOR
+        for(let i = 0; i < 5; i++){
+            console.log(`Iteración ${i + 1}`)
+        }
+
+        //Suma de dos números con FOR
+        let limite = 10;
+        let suma = 0;
+
+        for(let j = 1; j <= limite; j++){
+            suma += j;
+        }
+        console.log(`La suma de los número del 1 al ${limite} es ${suma}`);
+
+
+        let repeticiones = prompt("Ingerse el número de repeticiones");
+        //Bucle con configuración de usuario
+        for (let k = 0; k < repeticiones; k++){
+            console.log(`Iteración ${k + 1}`);
+        }
+
+        //Imprimir números pares
+        for (let i = 2; i <= 10; i += 2){
+            console.log(i);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

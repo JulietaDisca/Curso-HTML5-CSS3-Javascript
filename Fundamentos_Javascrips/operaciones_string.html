@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores de Stings</title>
+    <script>
+        /*La concatenación de strings se realiza con el operador +. Tambien puede usar el método concat()*/
+        let nombre = "Juan";
+        let apellido = "Perez";
+
+        //Usando el operador +
+        let nombreCompleto = nombre + " " + apellido;
+        console.log(nombreCompleto)
+
+        //Usando el método concat()
+        let nombreCompletoConcat = nombre.concat(" ", apellido);
+        console.log(nombreCompletoConcat);
+
+        //Puede obtener la longitud de un string con la propiedad .length
+        let mensaje = "Hola mundo!"
+        let longitud = mensaje.length;
+        console.log(longitud);
+
+        //Puede acceder a caracteres individuales utilizando el índice del caracter
+        let palabra = "Javascript";
+        let primerCaracter = palabra[0];
+        console.log(primerCaracter)
+
+        //Puedes convertir un string a mayúsculas o minusculs usando los metodos toUpperCase() y toLowerCase()
+        let texto = "Hola, mundo2!";
+        let mayusculas = texto.toUpperCase();
+        console.log(mayusculas);
+
+        let minusculas = texto.toLowerCase();
+        console.log(minusculas);
+
+        //Puede buscar subcadenas utilizando el método indexOf()
+        let frase = "El Javascript es divertido";
+        let posición = frase.indexOf("i");
+        console.log(posición)
+
+        //Puedes extraer subcadenas utilizando el método substring() o slice()
+        let original = "Javascript es poderoso";
+        let subcadena = original.substring(0, 10);
+        console.log(subcadena)
+
+        let otraSubCadena = original.slice(14, 22);
+        console.log(otraSubCadena);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
