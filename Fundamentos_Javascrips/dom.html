@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom (Document Object Model) en Javascript</title>
+    <style>
+        .resaltado{
+            font-weight: bold;
+            background: brown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="miTitulo">Hola, Mundo!</h1>
+    <div id="miContenedor"></div>
+    <p id="miParrafo">Este parrafo será eliminado</p>
+
+
+
+    <script>
+        /*El DOM (Document Object Model) es una representación en 
+        forma de árbol de la estructura de un documento HTML o XML. 
+        En Javascript, puedes manipular el DOM para cambiar dinamicamente 
+        el contenido, la estructura y el estilo de una pagina web.*/
+
+        const titulo = document.getElementById("miTitulo");
+
+        //Cambiar contenido del elemento
+        titulo.textContent = "www.render2web.com";
+        titulo.style.color = "blue";
+
+        //Crear un nuevo elemento div
+        const nuevoDiv = document.createElement("div");
+
+        //Configurar su contenido y estilo
+        nuevoDiv.textContent = "Nuevo Contenido";
+        nuevoDiv.style.background = "yellow";
+
+        //Acceder al contenedor existente y agregar el nuevo div
+        const contenedor = document.getElementById("miContenedor");
+        contenedor.appendChild(nuevoDiv);
+
+        //Acceder al parrafo por su ID
+        const parrafo = document.getElementById("miParrafo");
+
+        //Agregar una clase(CSS) al parrafo
+        parrafo.classList.add("resaltado");
+
+        //Eliminar el parrafo
+        parrafo.remove();
+
+
+    </script>
+</body>
+</html>

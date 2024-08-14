@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Javascript</title>
+    
+</head>
+<body>
+    <button onclick="saludar()">Haz click</button>
+
+    <button id="miBoton">Haz click 2</button>
+
+    <button id="miBoton2">Haz click 3</button>
+
+    <input type="text" id="miInput">
+
+    <input type="text" id="miInput2">
+
+    <script>
+        //Eventos
+        /*Los eventos en JavaScript permiten que una página web 
+        responda a las acciones del usuario, como clics de mouse, 
+        pulsaciones de teclas, cambios en formularios, entre otros.*/
+        function saludar(){
+            alert("Hola!");
+        }
+
+        /*addEventListener es un metodo que permite asociar eventos
+        a elementos de manera mas flexible. Aquí hay un ejemplo con
+        el evento onclick*/
+        document.getElementById("miBoton").addEventListener("click", function(){
+            alert("Hola!");
+        });
+
+        /*La función manejadora de eventos puede recibir un objeto de 
+        evento, que proporciona información sobre el evento. Aquí hay un ejemplo*/
+        document.getElementById("miBoton2").addEventListener("click", function(evento){
+            alert("Posición del click: " + evento.clientX + ", " + evento.clientY
+
+            );
+        })
+
+        // Puedes manejar eventos de teclado, como el evento keydown:
+        document.getElementById("miInput").addEventListener("keydown", function(evento){
+            console.log("Tecla presionada: " + evento.key);
+        });
+
+        /*Los eventos como change son útiles para detectar cambios
+        en elementos de formulario: */
+        document.getElementById("miInput2").addEventListener("change", function(event){
+            console.log("Valor cambiado a: " + event.target.value);
+        })
+
+        /*Podemos utilizar el evento load para ejecutar código cuando la 
+        página se hacargado completamente: */
+        window.addEventListener("load", function(){
+            alert("Pagina completamente cargada");
+        })
+
+    </script>
+</body>
+</html>

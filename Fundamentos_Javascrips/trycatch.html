@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Catch Javascript</title>
+</head>
+<body>
+    <script>
+
+        /*Los bloques Try Catch se utilizan para manejar excepciones o 
+        errores que puedan ocurrir durante la ejecucion de un bloque de 
+        código. Permite que un programa capture y gestione errores de manera 
+        controlada evitando que la ejecución del script se detenga abruptamente*/
+
+        try{
+            //Bloque de código que podría lanzar una excepción
+            let resultado = JSON.parse("texto no valido como JSON");
+        console.log(resultado); //Esta linea nunca se ejecutará si ocurre una excepción
+        } catch(error){
+            //Bloque de código que se ejecutará si se produce una excepción
+            console.log("Se produjo un error: " + error.message)
+        }finally {
+            //Bloque de código opcional que se ejecutará siempre, independientemente de si se produce una excepción o no
+            console.log("Este bloque se ejecutara siempre");
+        }
+    </script>
+</body>
+</html>

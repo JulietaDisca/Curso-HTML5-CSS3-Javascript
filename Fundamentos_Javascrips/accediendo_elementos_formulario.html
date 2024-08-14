@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accediendo a Elementos de Formlario en Javascript</title>
+</head>
+<body>
+
+    <form id="miFormulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required>
+        <br>
+        <br>
+        <button type="button" onclick="mostrarDatos()">Mostrar Datos</button>
+    </form>
+
+    
+    <script>
+        function mostrarDatos(){
+            //Acceder al formulario por su ID
+            const formulario = document.getElementById("miFormulario");
+
+            //Acceder a los elementos del formulario por sus nombres
+            const nombreElemento = formulario.elements["nombre"];
+
+            const correoElemento = formulario.elements["correo"];
+
+            //Obtener los valores de los elementos
+            const nombre = nombreElemento.value;
+            const correo = correoElemento.value;
+
+            //Mostrar los datos en la consola
+            console.log("Nombre: ", nombre);
+            console.log("Correo: ", correo);
+
+            //Puedes realizar otras operaciones con los datos aquí
+            //Por ejemplo, mostrar una alerta
+            alert(`Nombre: ${nombre}\n Correo: ${correo}`)
+        }  // "\n es un backslash para un salto en linea"
+    </script>
+</body>
+</html>

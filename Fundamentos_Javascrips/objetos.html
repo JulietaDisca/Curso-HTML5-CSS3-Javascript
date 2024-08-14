@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos Javascript</title>
+    <script>
+        //Objetos
+        //Creación de Objetos
+        let persona = {
+            nombre : "Juan",
+            edad: 30,
+            soltero: true,
+            saludar: function(){
+                console.log("Hola!");
+            }
+        }
+
+        /*Puedes acceder a las propiedades de un objeto 
+        utilizando la notación de punto(objet.propiedad) 
+        o la notación por corchetes(objeto["propiedad"])*/
+        console.log(persona.nombre);
+        console.log(persona.edad);
+
+        //Mostrar objeto
+        console.log(persona);
+
+        /*Puedes modificar el valor de una propiedad 
+        asignandole un nuevo valor*/
+        persona.edad = 35;
+        persona["soltero"] = false;
+
+        //Mostras objetos
+        console.log(persona);
+
+        //Agregar propiedades
+        persona.ciudad = "Lima"
+        /*Eliminar propiedades utilizando el operador delete*/
+        delete persona.edad;
+        //Mostrar objeto
+        console.log(persona);
+
+
+        /*Los metodos son funciones que estan asociadas a un objeto*/
+        persona.saludar();
+        
+        /*Puedes iterar sobre las propiedades 
+        de un objeto utilizando un bucle for...in*/
+        for(let clave in persona){
+            console.log(clave + ":" + persona[clave])
+        }
+
+        //Objetos anidados
+        let coche = {
+            marca: "Toyota",
+            modelo: "Corolla",
+            detalles: {
+                color: "Azul",
+                año: 2023
+            }
+        }
+
+        console.log(coche.detalles.año);
+
+        /*Los objetos se pasan por referencia, lo que significa 
+        que asignas un objeto a otra variable, ambas variables 
+        apuntan al mismo objeto */
+        let otraPersona = persona;
+        otraPersona.nombre = "María";
+        console.log(persona.nombre);
+        console.log(persona);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
